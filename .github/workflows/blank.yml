@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stacynailcare and Spa LLC | Premier Nail Salon in Windsor, CT</title>
+    <meta name="description" content="Stacynailcare and Spa LLC in Windsor, CT offers top-rated manicures, pedicures, and custom nail art. Relax in our luxurious spa environment. Book your appointment online today!">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            pink: '#fce4ec',     // Soft spa pink
+                            rose: '#f48fb1',     // Deeper rose for buttons/accents
+                            gold: '#d4af37',     // Luxurious gold
+                            dark: '#4a4a4a',     // Soft dark gray for text
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Lato', 'sans-serif'],
+                        serif: ['Cinzel', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+<body class="font-sans text-brand-dark bg-[#fafafa] antialiased">
+
+    <!-- Sticky Navigation -->
+    <nav class="fixed w-full z-50 glass-nav border-b border-brand-pink shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-24">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#home" class="flex flex-col">
+                        <span class="font-serif text-2xl md:text-3xl font-bold text-gray-800 tracking-wider">
+                            Stacynailcare
+                        </span>
+                        <span class="font-sans text-sm text-brand-gold tracking-[0.2em] uppercase font-bold">
+                            And Spa LLC
+                        </span>
+                    </a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-gray-600 hover:text-brand-rose transition font-medium">Home</a>
+                    <a href="#services" class="text-gray-600 hover:text-brand-rose transition font-medium">Services</a>
+                    <a href="#gallery" class="text-gray-600 hover:text-brand-rose transition font-medium">Gallery</a>
+                    <a href="https://stacynailcareandspa.booksy.com" target="_blank" rel="noopener noreferrer" class="bg-brand-gold hover:bg-yellow-600 text-white px-6 py-3 rounded-sm font-bold tracking-wide uppercase text-sm transition shadow-md flex items-center gap-2">
+                        <i class="fa-regular fa-calendar-check"></i> Book Now
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-800 hover:text-brand-rose focus:outline-none">
+                        <i class="fa-solid fa-bars text-3xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 shadow-xl absolute w-full">
+            <div class="px-4 pt-2 pb-6 space-y-2 text-center">
+                <a href="#home" class="block px-3 py-3 text-lg font-medium text-gray-700 hover:text-brand-rose">Home</a>
+                <a href="#services" class="block px-3 py-3 text-lg font-medium text-gray-700 hover:text-brand-rose">Services</a>
+                <a href="#gallery" class="block px-3 py-3 text-lg font-medium text-gray-700 hover:text-brand-rose">Our Work</a>
+                <a href="https://stacynailcareandspa.booksy.com" target="_blank" class="block px-3 py-4 mt-4 text-center rounded-sm text-base font-bold uppercase tracking-widest bg-brand-gold text-white hover:bg-yellow-600 shadow-md">
+                    Book Appointment
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-32 pb-20 md:pt-48 md:pb-32 bg-brand-pink/30 relative overflow-hidden">
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-brand-pink/50 blur-3xl opacity-50"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-brand-gold/20 blur-3xl opacity-50"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col items-center text-center">
+            <h1 class="text-5xl md:text-7xl font-serif font-bold text-gray-900 mb-6 leading-tight">
+                Luxury Nail Care <br/>
+                <span class="text-brand-rose">in Windsor, CT</span>
+            </h1>
+            <p class="text-lg md:text-xl text-gray-600 mb-10 max-w-2xl mx-auto font-light leading-relaxed">
+                Welcome to Stacynailcare and Spa LLC. Experience 5-star service, exquisite nail art, and unparalleled relaxation right on Maple Ave.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center w-full sm:w-auto">
+                <a href="https://stacynailcareandspa.booksy.com" target="_blank" rel="noopener noreferrer" class="bg-gray-900 hover:bg-brand-rose text-white px-10 py-4 rounded-sm text-sm font-bold uppercase tracking-widest transition shadow-lg w-full sm:w-auto">
+                    Book on Booksy
+                </a>
+                <a href="#services" class="border border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white px-10 py-4 rounded-sm text-sm font-bold uppercase tracking-widest transition w-full sm:w-auto">
+                    Our Services
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Overview Section -->
+    <section id="services" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-sm font-bold tracking-widest text-brand-gold uppercase mb-3">What We Offer</h2>
+                <h3 class="text-3xl md:text-5xl font-serif font-bold text-gray-900">Elevate Your Look</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div class="text-center p-8 border border-brand-pink/50 bg-brand-pink/10 rounded-sm">
+                    <i class="fa-solid fa-hands fa-2x text-brand-rose mb-6"></i>
+                    <h4 class="text-xl font-serif font-bold text-gray-900 mb-3">Manicures</h4>
+                    <p class="text-gray-600 font-light mb-6">From perfectly polished natural nails to durable gel manicures that shine for weeks.</p>
+                </div>
+                <div class="text-center p-8 border border-brand-gold/30 bg-brand-gold/5 rounded-sm shadow-sm relative -top-4">
+                    <i class="fa-solid fa-star fa-2x text-brand-gold mb-6"></i>
+                    <h4 class="text-xl font-serif font-bold text-gray-900 mb-3">Custom Nail Art</h4>
+                    <p class="text-gray-600 font-light mb-6">Bring us your inspiration! We specialize in intricate designs, acrylics, and stunning custom sets.</p>
+                </div>
+                <div class="text-center p-8 border border-brand-pink/50 bg-brand-pink/10 rounded-sm">
+                    <i class="fa-solid fa-spa fa-2x text-brand-rose mb-6"></i>
+                    <h4 class="text-xl font-serif font-bold text-gray-900 mb-3">Spa Pedicures</h4>
+                    <p class="text-gray-600 font-light mb-6">Relax and unwind with our rejuvenating spa pedicures designed to soothe tired feet.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section (Masonry Grid for Booksy Photos) -->
+    <section id="gallery" class="py-24 bg-[#fafafa]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-sm font-bold tracking-widest text-brand-gold uppercase mb-3">Portfolio</h2>
+                <h3 class="text-3xl md:text-5xl font-serif font-bold text-gray-900 mb-4">Our Recent Work</h3>
+                <p class="text-gray-600 max-w-2xl mx-auto">Check out our latest manicures, nail extensions, and nail art straight from our Booksy profile.</p>
+            </div>
+
+            <!-- MASONRY GRID INSTRUCTIONS:
+                 1. Go to https://stacynailcareandspa.booksy.com
+                 2. Right-click on a photo of your work and select "Copy Image Address" (or "Copy Image URL").
+                 3. Below, paste that URL between the quotation marks in the src="" attribute, replacing the placeholder URL.
+            -->
+            <div class="columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
+                
+                <!-- IMAGE 1 -->
+                <div class="break-inside-avoid">
+                    <img src="Screenshot 2026-10-15 at 8.33.54 AM.jpg" alt="Facial Techniques and Spa Service" class="w-full h-auto rounded-sm shadow-sm hover:shadow-lg transition">
+                </div>
+
+                <!-- IMAGE 2 -->
+                <div class="break-inside-avoid">
+                    <img src="Screenshot 2026-10-15 at 8.34.00 AM.jpg" alt="Bright Yellow Manicure" class="w-full h-auto rounded-sm shadow-sm hover:shadow-lg transition">
+                </div>
+                
+                <!-- IMAGE 3 -->
+                <div class="break-inside-avoid">
+                    <img src="Screenshot 2026-10-15 at 8.34.19 AM.jpg" alt="Relaxing Spa Pedicure with Refreshments" class="w-full h-auto rounded-sm shadow-sm hover:shadow-lg transition">
+                </div>
+
+                <!-- IMAGE 4 -->
+                <div class="break-inside-avoid">
+                    <img src="Screenshot 2026-10-15 at 8.34.31 AM.jpg" alt="Red Light Therapy Facial" class="w-full h-auto rounded-sm shadow-sm hover:shadow-lg transition">
+                </div>
+
+                <!-- IMAGE 5 -->
+                <div class="break-inside-avoid">
+                    <img src="Screenshot 2026-10-15 at 8.34.42 AM.jpg" alt="Vibrant Green Gel Manicure" class="w-full h-auto rounded-sm shadow-sm hover:shadow-lg transition">
+                </div>
+
+            </div>
+            
+            <div class="mt-12 text-center">
+                 <a href="https://stacynailcareandspa.booksy.com" target="_blank" class="inline-flex items-center gap-2 text-brand-gold hover:text-yellow-600 font-bold uppercase tracking-wider text-sm transition">
+                    View full portfolio on Booksy <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Local SEO Section -->
+    <footer class="bg-gray-900 text-white pt-20 pb-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
+                
+                <!-- Brand -->
+                <div>
+                    <h3 class="font-serif text-2xl font-bold text-white tracking-wider mb-2">
+                        Stacynailcare
+                    </h3>
+                    <p class="text-brand-gold text-xs tracking-[0.2em] uppercase font-bold mb-6">And Spa LLC</p>
+                    <p class="text-gray-400 font-light leading-relaxed">
+                        Proudly serving Windsor, CT and surrounding areas with top-tier nail care, stunning custom designs, and a relaxing spa atmosphere.
+                    </p>
+                </div>
+
+                <!-- Location & Contact -->
+                <div>
+                    <h4 class="text-sm font-bold uppercase tracking-widest text-brand-gold mb-6">Visit Us</h4>
+                    <ul class="space-y-4 text-gray-400 font-light">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-location-dot mt-1 text-brand-rose"></i>
+                            <span>Maple Ave<br>Windsor, CT 06095</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-calendar-check text-brand-rose"></i>
+                            <span>Appointments exclusively via Booksy</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- CTA -->
+                <div>
+                    <h4 class="text-sm font-bold uppercase tracking-widest text-brand-gold mb-6">Ready for a refresh?</h4>
+                    <p class="text-gray-400 font-light mb-6">Skip the wait and secure your spot instantly through our online booking portal.</p>
+                    <a href="https://stacynailcareandspa.booksy.com" target="_blank" class="block text-center bg-brand-rose hover:bg-pink-500 text-white px-6 py-3 rounded-sm font-bold uppercase tracking-widest text-sm transition">
+                        Book Appointment
+                    </a>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500 font-light">
+                <p>&copy; 2026 Stacynailcare and Spa LLC. Windsor, CT. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+            });
+
+            const links = menu.querySelectorAll('a');
+            links.forEach(link => {
+                link.addEventListener('click', () => {
+                    menu.classList.add('hidden');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
